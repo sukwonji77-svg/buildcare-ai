@@ -4,5 +4,6 @@ version = "0.1.0"
 description = "AI building problem assistant"
 requires-python = ">=3.12"
 dependencies = [
+    "fastapi",
     "google-genai"
 ]
