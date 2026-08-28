@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>BuildCare AI | AI 건축 문제 해결 도우미</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <header>
+        <nav class="navbar">
+            <a href="#home" class="logo">BuildCare AI</a>
+
+            <ul class="nav-menu">
+                <li><a href="#home">HOME</a></li>
+                <li><a href="#analysis">AI 분석</a></li>
+                <li><a href="#about">서비스 소개</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <main>
+
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <p class="eyebrow">AI BUILDING ASSISTANT</p>
+
+                <h1>
+                    건축물의 이상 증상,<br>
+                    AI에게 먼저 물어보세요.
+                </h1>
+
+                <p class="hero-description">
+                    균열, 누수, 결로, 곰팡이, 마감재 손상 등
+                    건축물에서 발생하는 문제의 가능한 원인과
+                    점검 포인트를 AI가 이해하기 쉽게 분석합니다.
+                </p>
+
+                <a href="#analysis" class="primary-button">
+                    AI 분석 시작하기
+                </a>
+            </div>
+        </section>
+
+
+        <section id="analysis" class="analysis-section">
+
+            <div class="section-heading">
+                <p class="eyebrow">AI ANALYSIS</p>
+                <h2>AI 건축 문제 분석</h2>
+                <p>
+                    건물과 문제에 대한 정보를 입력하면
+                    AI가 가능한 원인과 대응 방법을 분석합니다.
+                </p>
+            </div>
+
+            <div class="analysis-container">
+
+                <div class="input-card">
+
+                    <h3>건축물 정보 입력</h3>
+
+                    <label for="buildingType">건물 유형</label>
+                    <select id="buildingType">
+                        <option value="">건물 유형을 선택하세요</option>
+                        <option value="철근콘크리트">철근콘크리트</option>
+                        <option value="철골">철골</option>
+                        <option value="조적">조적</option>
+                        <option value="목조">목조</option>
+                        <option value="기타">기타</option>
+                    </select>
+
+
+                    <label for="problemType">문제 유형</label>
+                    <select id="problemType">
+                        <option value="">문제 유형을 선택하세요</option>
+                        <option value="균열">균열</option>
+                        <option value="누수">누수</option>
+                        <option value="결로">결로</option>
+                        <option value="곰팡이">곰팡이</option>
+                        <option value="마감재 손상">마감재 손상</option>
+                        <option value="기타">기타</option>
+                    </select>
+
+
+                    <label for="description">상황 설명</label>
+
+                    <textarea
+                        id="description"
+                        rows="7"
+                        placeholder="예: 아파트 외벽 창문 주변에 세로 방향의 균열이 발생했고, 비가 오면 주변이 약간 젖습니다."
+                    ></textarea>
+
+
+                    <button id="analyzeButton" type="button">
+                        AI 분석하기
+                    </button>
+
+                    <p id="statusMessage" class="status-message"></p>
+
+                </div>
+
+
+                <div class="result-card">
+
+                    <div class="result-title">
+                        <span class="ai-badge">AI</span>
+                        <h3>분석 결과</h3>
+                    </div>
+
+                    <div id="resultContent" class="result-content">
+
+                        <div class="empty-result">
+                            <p>
+                                건축물 정보를 입력하고<br>
+                                <strong>AI 분석하기</strong>를 눌러주세요.
+                            </p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <section id="about" class="about-section">
+
+            <div class="section-heading">
+                <p class="eyebrow">ABOUT</p>
+                <h2>BuildCare AI 소개</h2>
+            </div>
+
+            <div class="about-grid">
+
+                <div class="about-card">
+                    <h3>서비스 목적</h3>
+                    <p>
+                        건축물에서 발생하는 이상 현상을
+                        AI를 활용해 쉽고 빠르게 파악할 수 있도록
+                        초기 분석 정보를 제공합니다.
+                    </p>
+                </div>
+
+
+                <div class="about-card">
+                    <h3>이런 분께 유용합니다</h3>
+                    <p>
+                        건물 관리자, 시설관리 담당자,
+                        건물 소유자 및 건축물의 이상 현상을
+                        처음 접하는 일반 사용자를 위한 서비스입니다.
+                    </p>
+                </div>
+
+
+                <div class="about-card">
+                    <h3>사용 기술</h3>
+                    <p>
+                        HTML, CSS, JavaScript, Python,
+                        Gemini API와 Vercel Serverless Functions를
+                        활용하여 구현합니다.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="notice">
+                <strong>주의사항</strong>
+                <p>
+                    BuildCare AI의 분석 결과는 초기 판단을 돕기 위한
+                    참고 정보이며, 구조안전·법적 판단 또는 전문 기술자의
+                    현장 진단을 대체하지 않습니다.
+                </p>
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+        <p>© 2026 BuildCare AI</p>
+        <p>AI Building Problem Assistant</p>
+    </footer>
+
+
+    <script src="js/app.js"></script>
+
+</body>
+</html>
