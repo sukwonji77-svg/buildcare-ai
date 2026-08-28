@@ -15,19 +15,34 @@ analyzeButton.addEventListener("click", async () => {
 
 
     if (!building) {
-        statusMessage.textContent = "건물 유형을 선택해주세요.";
-        return;
-    }
+    statusMessage.textContent = "건물 유형을 선택해주세요.";
+    resultContent.innerHTML = `
+        <div class="empty-result">
+            <p>건물 유형을 선택한 후 다시 시도해주세요.</p>
+        </div>
+    `;
+    return;
+}
 
-    if (!problem) {
-        statusMessage.textContent = "문제 유형을 선택해주세요.";
-        return;
-    }
+if (!problem) {
+    statusMessage.textContent = "문제 유형을 선택해주세요.";
+    resultContent.innerHTML = `
+        <div class="empty-result">
+            <p>문제 유형을 선택한 후 다시 시도해주세요.</p>
+        </div>
+    `;
+    return;
+}
 
-    if (!detail) {
-        statusMessage.textContent = "상황 설명을 입력해주세요.";
-        return;
-    }
+if (!detail) {
+    statusMessage.textContent = "상황 설명을 입력해주세요.";
+    resultContent.innerHTML = `
+        <div class="empty-result">
+            <p>상황 설명을 입력한 후 AI 분석을 실행해주세요.</p>
+        </div>
+    `;
+    return;
+}
 
 
     statusMessage.textContent = "AI가 건축물 문제를 분석하고 있습니다...";
